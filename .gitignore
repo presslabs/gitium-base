@@ -17,9 +17,9 @@ wp-config.php
 *.bak
 *~
 error_log
+debug.txt
 
 # wordpress ignores -- found the hard way
 
 # google docs backups
 wp-content/gdbackup/
-#
