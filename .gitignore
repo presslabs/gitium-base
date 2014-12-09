@@ -23,3 +23,6 @@ debug.txt
 
 # google docs backups
 wp-content/gdbackup/
+
+# special recent posts cache
+wp-content/plugins/special-recent-posts/cache/
