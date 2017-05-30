@@ -11,7 +11,7 @@ sitemap.xml
 sitemap.xml.gz
 *sitemap*.xml*
 *.log
-log/*
+log/
 .vagrant
 wp-config.php
 *.bak
@@ -29,3 +29,16 @@ wp-content/plugins/special-recent-posts/cache/
 
 # Fast Secure Contact Form captcha cache
 wp-content/plugins/si-contact-form/captcha/cache/
+
+# IDE Ignores
+.DS_Store
+.ansible
+.bundle
+.envrc
+.github/
+.idea/
+.travis.yml
+package.box
+playbook.retry
+wordpress/*
+Movefile
