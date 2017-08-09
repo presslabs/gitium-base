@@ -1,0 +1,62 @@
+#
+# This gitignore file is generated and managed by Presslabs.
+# It's content will be overwritten. Please modify the .gitignore one level up.
+#
+
+#
+# Ignore error logs and other debug logs
+#
+*.log
+log/*
+error_log
+debug.txt
+
+#
+# Ignore WordPress specific media
+#
+/uploads
+/blogs.dir
+/upgrade
+/backup-db
+/backups
+/cache
+/gdbackup
+
+# Ignore sitemaps
+sitemap.xml
+sitemap.xml.gz
+*sitemap*.xml*
+
+#
+# Ignore plugin specific content
+#
+
+# special recent posts cache
+/plugins/special-recent-posts/cache
+/plugins/special-recent-posts/cache/**
+# Fast Secure Contact Form captcha cache
+/plugins/si-contact-form/captcha/cache
+/plugins/si-contact-form/captcha/cache/**
+
+#
+# https://github.com/github/gitignore/blob/master/Global/Vim.gitignore
+#
+
+# swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
+# auto-generated tag files
+tags
+
+#
+# Ignore backup files
+#
+*.bak
+*~
