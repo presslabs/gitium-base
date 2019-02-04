@@ -2,7 +2,6 @@
 # This gitignore file is generated and managed by Presslabs.
 # It's content will be overwritten. Please modify the .gitignore one level up.
 #
-
 #
 # Ignore error logs and other debug logs
 #
@@ -10,7 +9,6 @@
 log/*
 error_log
 debug.txt
-
 #
 # Ignore WordPress specific media
 #
@@ -21,27 +19,23 @@ debug.txt
 /backups
 /cache
 /gdbackup
-
+/updraft
 # Ignore sitemaps
 sitemap.xml
 sitemap.xml.gz
 *sitemap*.xml*
-
 #
 # Ignore plugin specific content
 #
-
 # special recent posts cache
 /plugins/special-recent-posts/cache
 /plugins/special-recent-posts/cache/**
 # Fast Secure Contact Form captcha cache
 /plugins/si-contact-form/captcha/cache
 /plugins/si-contact-form/captcha/cache/**
-
 #
 # https://github.com/github/gitignore/blob/master/Global/Vim.gitignore
 #
-
 # swap
 [._]*.s[a-v][a-z]
 [._]*.sw[a-p]
@@ -54,9 +48,25 @@ Session.vim
 *~
 # auto-generated tag files
 tags
-
 #
 # Ignore backup files
 #
 *.bak
 *~
+#
+# WPML folders needed for the plugin to work properly
+!/plugins/sitepress-multilingual-cms/classes/xml-config/log/
+!/plugins/sitepress-multilingual-cms/templates/xml-config/
+!/plugins/sitepress-multilingual-cms/templates/xml-config/log/
+!/plugins/sitepress-multilingual-cms/vendor/twig/twig/doc/tags/
+!/plugins/wpml-translation-management/classes/translation-proxy/log/
+#
+#Elementor Pro folders needed for the plugin to work properly
+!/plugins/elementor-pro/modules/dynamic-tags/acf/tags/
+!/plugins/elementor-pro/modules/dynamic-tags/pods/tags/
+!/plugins/elementor-pro/modules/dynamic-tags/tags/
+!/plugins/elementor-pro/modules/dynamic-tags/toolset/tags/
+!/plugins/elementor-pro/modules/woocommerce/tags/
+#
+#MailPoet files needed for the plugin to work
+!/plugins/mailpoet/vendor-prefixed/psr/log/
