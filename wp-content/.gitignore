@@ -70,3 +70,10 @@ tags
 #
 #MailPoet files needed for the plugin to work
 !/plugins/mailpoet/vendor-prefixed/psr/log/
+#
+#Elementor Pro folders needed for the plugin to work
+!/plugins/elementor-pro/modules/dynamic-tags/acf/tags/
+!/plugins/elementor-pro/modules/dynamic-tags/pods/tags/
+!/plugins/elementor-pro/modules/dynamic-tags/tags/
+!/plugins/elementor-pro/modules/dynamic-tags/toolset/tags/
+!/plugins/elementor-pro/modules/woocommerce/tags/
