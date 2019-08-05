@@ -77,3 +77,6 @@ tags
 !/plugins/elementor-pro/modules/dynamic-tags/tags/
 !/plugins/elementor-pro/modules/dynamic-tags/toolset/tags/
 !/plugins/elementor-pro/modules/woocommerce/tags/
+
+#Shortpixel folder needed for the plugin to work
+!/plugins/shortpixel-image-optimiser/build/shortpixel/log/
