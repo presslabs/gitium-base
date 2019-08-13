@@ -80,3 +80,6 @@ tags
 
 #Shortpixel folder needed for the plugin to work
 !/plugins/shortpixel-image-optimiser/build/shortpixel/log/
+
+#Mailpoet folder needed for the plugin to work
+!/plugins/mailpoet/vendor-prefixed/
