@@ -84,3 +84,6 @@ tags
 
 #Mailpoet folder needed for the plugin to work
 !/plugins/mailpoet/vendor-prefixed/
+
+!/plugins/mollie-payments-for-woocommerce/includes/mollie-api-php/vendor/
+!/plugins/wordpress-paazl-plugin/log/
