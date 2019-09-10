@@ -60,31 +60,22 @@ tags
 !/plugins/sitepress-multilingual-cms/templates/xml-config/log/
 !/plugins/sitepress-multilingual-cms/vendor/twig/twig/doc/tags/
 !/plugins/wpml-translation-management/classes/translation-proxy/log/
-#
+
 #Elementor Pro folders needed for the plugin to work properly
 !/plugins/elementor-pro/modules/dynamic-tags/acf/tags/
 !/plugins/elementor-pro/modules/dynamic-tags/pods/tags/
 !/plugins/elementor-pro/modules/dynamic-tags/tags/
 !/plugins/elementor-pro/modules/dynamic-tags/toolset/tags/
 !/plugins/elementor-pro/modules/woocommerce/tags/
-#
+
 #MailPoet files needed for the plugin to work
 !/plugins/mailpoet/vendor-prefixed/psr/log/
-#
-#Elementor Pro folders needed for the plugin to work
-!/plugins/elementor-pro/modules/dynamic-tags/acf/tags/
-!/plugins/elementor-pro/modules/dynamic-tags/pods/tags/
-!/plugins/elementor-pro/modules/dynamic-tags/tags/
-!/plugins/elementor-pro/modules/dynamic-tags/toolset/tags/
-!/plugins/elementor-pro/modules/woocommerce/tags/
 
 #Shortpixel folder needed for the plugin to work
 !/plugins/shortpixel-image-optimiser/build/shortpixel/log/
 !/plugins/enable-media-replace/build/shortpixel/log/
 
-#Mailpoet folder needed for the plugin to work
-!/plugins/mailpoet/vendor-prefixed/
-
+#Mischa Shop Plugins
 /plugins/mollie-payments-for-woocommerce/includes/mollie-api-php/.gitignore
 !/plugins/mollie-payments-for-woocommerce/includes/mollie-api-php/vendor/
 !/plugins/wordpress-paazl-plugin/log/
