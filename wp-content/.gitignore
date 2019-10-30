@@ -75,7 +75,17 @@ tags
 !/plugins/shortpixel-image-optimiser/build/shortpixel/log/
 !/plugins/enable-media-replace/build/shortpixel/log/
 
-#Mischa Shop Plugins
+#Mollie Shop Plugins
 /plugins/mollie-payments-for-woocommerce/includes/mollie-api-php/.gitignore
 !/plugins/mollie-payments-for-woocommerce/includes/mollie-api-php/vendor/
 !/plugins/wordpress-paazl-plugin/log/
+
+#RankMath
+!/plugins/seo-by-rank-math/vendor/
+!/plugins/seo-by-rank-math/assets/vendor/
+!/plugins/seo-by-rank-math/vendor/psr/log/
+!/plugins/seo-by-rank-math/includes/modules/
+!/plugins/seo-by-rank-math/vendor/psr/log/Psr/Log/
+!/plugins/seo-by-rank-math/vendor/cmb2/cmb2/apigen/theme-bootstrap/src/
+!/plugins/seo-by-rank-math/vendor/cmb2/cmb2/apigen/theme-bootstrap/src/sitemap.xml.latte
+/plugins/seo-by-rank-math/sitemap-cache/
