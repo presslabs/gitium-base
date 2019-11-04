@@ -89,3 +89,6 @@ tags
 !/plugins/seo-by-rank-math/vendor/cmb2/cmb2/apigen/theme-bootstrap/src/
 !/plugins/seo-by-rank-math/vendor/cmb2/cmb2/apigen/theme-bootstrap/src/sitemap.xml.latte
 /plugins/seo-by-rank-math/sitemap-cache/
+
+#Toplytics
+!/plugins/toplytics/vendor/
