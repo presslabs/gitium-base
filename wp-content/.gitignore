@@ -90,7 +90,11 @@ tags
 !/plugins/seo-by-rank-math/vendor/cmb2/cmb2/apigen/theme-bootstrap/src/sitemap.xml.latte
 /plugins/seo-by-rank-math/sitemap-cache/
 
+#Google Site Kit
 !/plugins/google-site-kit/third-party/monolog/monolog/src/
 
 #Toplytics
 !/plugins/toplytics/vendor/
+
+/plugins/special-recent-posts/cache/
+/plugins/si-contact-form/captcha/cache/
