@@ -4,6 +4,7 @@
 !/wp-content/mu-plugins/
 !/wp-content/plugins/
 !/wp-content/themes/
+!/wp-content/root/
 
 ._*
 .ansible
