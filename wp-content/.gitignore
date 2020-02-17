@@ -2,13 +2,7 @@
 # This gitignore file is generated and managed by Presslabs.
 # It's content will be overwritten. Please modify the .gitignore one level up.
 #
-#
-# Ignore error logs and other debug logs
-#
-*.log
-log/*
-error_log
-debug.txt
+
 #
 # Ignore WordPress specific media
 #
@@ -20,81 +14,35 @@ debug.txt
 /cache
 /gdbackup
 /updraft
-# Ignore sitemaps
-sitemap.xml
-sitemap.xml.gz
-*sitemap*.xml*
+
 #
 # Ignore plugin specific content
 #
-# special recent posts cache
+
+# Special recent posts cache
 /plugins/special-recent-posts/cache
 /plugins/special-recent-posts/cache/**
+
 # Fast Secure Contact Form captcha cache
 /plugins/si-contact-form/captcha/cache
 /plugins/si-contact-form/captcha/cache/**
+
+#
+# VIM and linux specific files
 #
 # https://github.com/github/gitignore/blob/master/Global/Vim.gitignore
-#
+
 # swap
 [._]*.s[a-v][a-z]
 [._]*.sw[a-p]
 [._]s[a-v][a-z]
 [._]sw[a-p]
-# session
 Session.vim
-# temporary
 .netrwhist
 *~
+
 # auto-generated tag files
-tags
-#
+/tags
+
 # Ignore backup files
-#
 *.bak
-*~
-#
-# WPML folders needed for the plugin to work properly
-!/plugins/sitepress-multilingual-cms/classes/xml-config/log/
-!/plugins/sitepress-multilingual-cms/templates/xml-config/
-!/plugins/sitepress-multilingual-cms/templates/xml-config/log/
-!/plugins/sitepress-multilingual-cms/vendor/twig/twig/doc/tags/
-!/plugins/wpml-translation-management/classes/translation-proxy/log/
-
-#Elementor Pro folders needed for the plugin to work properly
-!/plugins/elementor-pro/modules/dynamic-tags/acf/tags/
-!/plugins/elementor-pro/modules/dynamic-tags/pods/tags/
-!/plugins/elementor-pro/modules/dynamic-tags/tags/
-!/plugins/elementor-pro/modules/dynamic-tags/toolset/tags/
-!/plugins/elementor-pro/modules/woocommerce/tags/
-
-#MailPoet files needed for the plugin to work
-!/plugins/mailpoet/vendor-prefixed/psr/log/
-
-#Shortpixel folder needed for the plugin to work
-!/plugins/shortpixel-image-optimiser/build/shortpixel/log/
-!/plugins/enable-media-replace/build/shortpixel/log/
-
-#Mollie Shop Plugins
-/plugins/mollie-payments-for-woocommerce/includes/mollie-api-php/.gitignore
-!/plugins/mollie-payments-for-woocommerce/includes/mollie-api-php/vendor/
-!/plugins/wordpress-paazl-plugin/log/
-
-#RankMath
-!/plugins/seo-by-rank-math/vendor/
-!/plugins/seo-by-rank-math/assets/vendor/
-!/plugins/seo-by-rank-math/vendor/psr/log/
-!/plugins/seo-by-rank-math/includes/modules/
-!/plugins/seo-by-rank-math/vendor/psr/log/Psr/Log/
-!/plugins/seo-by-rank-math/vendor/cmb2/cmb2/apigen/theme-bootstrap/src/
-!/plugins/seo-by-rank-math/vendor/cmb2/cmb2/apigen/theme-bootstrap/src/sitemap.xml.latte
-/plugins/seo-by-rank-math/sitemap-cache/
-
-#Google Site Kit
-!/plugins/google-site-kit/third-party/monolog/monolog/src/
-
-#Toplytics
-!/plugins/toplytics/vendor/
-
-/plugins/special-recent-posts/cache/
-/plugins/si-contact-form/captcha/cache/

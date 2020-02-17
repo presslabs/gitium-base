@@ -39,7 +39,7 @@ access_log
 debug.txt
 ehthumbs.db
 error_log
-log/
+/log/
 Movefile
 package.box
 playbook.retry
