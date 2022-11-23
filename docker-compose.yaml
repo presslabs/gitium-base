@@ -1,0 +1,48 @@
+version: "3.3"
+
+services:
+  wordpress:
+    image: docker.io/presslabs/wordpress-runtime:6.1-php-8.0
+    user: "${USER_ID:-1000}:${GROUP_ID:-1000}"
+    depends_on:
+      - db
+      - memcached
+    volumes:
+      - ./config:/app/config
+      - ./wp-content:/app/web/wp-content:rw
+      - ./wp-config-docker.php:/app/web/wp-config.php:rw
+    ports:
+      - "8080:8080"
+    restart: always
+    tmpfs:
+      - /usr/local/docker/etc:uid=${USER_ID:-1000},gid=${GROUP_ID:-1000}
+      - /var/run:uid=${USER_ID:-1000},gid=${GROUP_ID:-1000}
+    environment:
+      DB_HOST: db:3306
+      DB_USER: wordpress
+      DB_PASSWORD: not-so-secure
+      DB_NAME: wordpress
+      MEMCACHED_HOST: memcached:11211
+      WP_HOME: http://localhost:8080
+      WP_SITEURL: http://localhost:8080/wp
+      WP_ENV: development
+      PHP_REQUEST_TIMEOUT: 300
+      WORKER_GROUP: ${USER_ID:-1000}
+      WORKER_USER: ${GROUP_ID:-1000}
+
+  db:
+    image: percona:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: not-so-secure
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: not-so-secure
+
+  memcached:
+    image: memcached:1.5
+
+volumes:
+  db_data: {}

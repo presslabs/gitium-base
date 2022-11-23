@@ -7,10 +7,16 @@ Kickstart WordPress projects with a sane development environment!
 
     git clone -o gitium git@github.com:PressLabs/gitium-base AWESOME_SITE
     cd AWESOME_SITE
-    git submodule update --init
-    vagrant up
 
-Point your browser at [http://AWESOME_SITE.local](http://AWESOME_SITE.local).
+### Linux
+
+    USER_ID="$(id -u)" GROUP_ID="$(id -g)" docker compose up
+
+### MacOS
+
+    docker compose up
+
+Point your browser at [http://localhost:8080/wp](http://localhost:8080/wp).
 
 ## Connect to your remote git
 
@@ -22,15 +28,4 @@ Point your browser at [http://AWESOME_SITE.local](http://AWESOME_SITE.local).
 ## Requirements
 
 To start a project you need to download and install
-[vagrant](http://www.vagrantup.com/downloads.html) and
-[virtualbox](https://www.virtualbox.org/wiki/Downloads).
-
-On Ubuntu or Debian after download issue:
-
-    dpkg -i vagrant*.deb
-    dpkg -i virtualbox*.deb
-
-## Notes
-
- * Vagrant must be installed / downloaded from the vagrantup.com site
- * Check your virtualization settings from your PC BIOS
+[docker compose](https://docs.docker.com/compose/).
