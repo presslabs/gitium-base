@@ -48,3 +48,4 @@ sitemap.xml.gz
 wordfence-waf.php
 wordpress/*
 wp-config.php
+.svnignore
