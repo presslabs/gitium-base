@@ -49,3 +49,4 @@ wordfence-waf.php
 wordpress/*
 wp-config.php
 .svnignore
+!/wp-content/plugins/wordpress-seo/src/wordpress/
