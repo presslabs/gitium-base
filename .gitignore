@@ -5,6 +5,7 @@
 !/wp-content/plugins/
 !/wp-content/themes/
 !/wp-content/root/
+!/wp-content/fonts/
 
 ._*
 .ansible
