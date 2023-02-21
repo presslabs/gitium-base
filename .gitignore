@@ -6,6 +6,7 @@
 !/wp-content/themes/
 !/wp-content/root/
 !/wp-content/fonts/
+!/wp-content/plugins/advanced-cron-manager/vendor/
 
 ._*
 .ansible
