@@ -22,7 +22,7 @@
  * Set up our global environment constant and load its config first
  * Default: production
  */
-define('WP_ENV', getenv('WP_ENV') ?: 'production');
+define('WP_ENV', getenv('WP_ENV') ?: 'development');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
