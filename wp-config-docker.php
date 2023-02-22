@@ -64,6 +64,11 @@ define( 'NONCE_SALT',       getenv( 'NONCE_SALT' ) ?: 'put your unique phrase he
 /**#@-*/
 
 /**
+ * Error reporting
+ **/
+error_reporting(E_ALL);
+
+/**
  * WordPress Database Table prefix.
  *
  * You can have multiple installations in one database if you give each
