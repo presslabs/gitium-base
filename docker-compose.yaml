@@ -42,7 +42,7 @@ services:
       MYSQL_PASSWORD: not-so-secure
 
   memcached:
-    image: memcached:1.5
+    image: memcached:1.6
 
 volumes:
   db_data: {}
