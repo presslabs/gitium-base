@@ -22,7 +22,7 @@
  * Set up our global environment constant and load its config first
  * Default: production
  */
-define('WP_ENV', getenv('WP_ENV') ?: 'development');
+define('WP_ENV', getenv('WP_ENV') ?: 'production');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
@@ -62,11 +62,6 @@ define( 'LOGGED_IN_SALT',   getenv( 'LOGGED_IN_SALT' ) ?: 'put your unique phras
 define( 'NONCE_SALT',       getenv( 'NONCE_SALT' ) ?: 'put your unique phrase here' );
 
 /**#@-*/
-
-/**
- * Error reporting
- **/
-error_reporting(E_ALL);
 
 /**
  * WordPress Database Table prefix.

@@ -10,7 +10,7 @@ services:
     volumes:
       - ./config:/app/config
       - ./wp-content:/app/web/wp-content:rw
-      - ./wp-config-docker.php:/app/web/wp-config.php:rw
+      - ./.dev/wp-config-docker.php:/app/web/wp-config.php:rw
     ports:
       - "8080:8080"
     restart: always
@@ -33,7 +33,8 @@ services:
   db:
     image: percona:5.7
     volumes:
-      - db_data:/var/lib/mysql
+      - ./.dev/db_data:/var/lib/mysql
+      - ./.dev/my.cnf:/etc/my.cnf.d/my.cnf
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: not-so-secure
