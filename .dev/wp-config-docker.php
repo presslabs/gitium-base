@@ -89,7 +89,7 @@ if ( ! defined( 'WP_HOME' ) ) {
     define( 'WP_HOME', rtrim( getenv( 'WP_HOME' ) ?: $scheme . $_SERVER['HTTP_HOST'], '/' ) );
 }
 if ( ! defined( 'WP_SITEURL' ) ) {
-    define( 'WP_SITEURL', rtrim( getenv( 'WP_SITEURL' ), '/' ) ?: WP_HOME . '/wp' );
+    define( 'WP_SITEURL', rtrim( getenv( 'WP_SITEURL' ), '/' ) ?: WP_HOME );
 }
 unset( $scheme );
 
@@ -129,7 +129,7 @@ define('FS_METHOD', 'direct');
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
-    define( 'ABSPATH', dirname( __FILE__ ) . '/wp/' );
+    define( 'ABSPATH', dirname( __FILE__ ) );
 }
 
 /** Sets up WordPress vars and included files. */

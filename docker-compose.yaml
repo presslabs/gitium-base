@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   wordpress:
-    image: docker.io/presslabs/wordpress-runtime:6.1-php-8.0
+    image: docker.io/presslabs/wordpress-runtime:classic-6.1-php-8.1
     user: "${USER_ID:-1000}:${GROUP_ID:-1000}"
     depends_on:
       - db
@@ -18,13 +18,14 @@ services:
       - /usr/local/docker/etc:uid=${USER_ID:-1000},gid=${GROUP_ID:-1000}
       - /var/run:uid=${USER_ID:-1000},gid=${GROUP_ID:-1000}
     environment:
+      WP_ENV: development
       DB_HOST: db:3306
       DB_USER: wordpress
       DB_PASSWORD: not-so-secure
       DB_NAME: wordpress
       MEMCACHED_HOST: memcached:11211
       WP_HOME: http://localhost:8080
-      WP_SITEURL: http://localhost:8080/wp
+      WP_SITEURL: http://localhost:8080
       WP_ENV: development
       PHP_REQUEST_TIMEOUT: 300
       WORKER_GROUP: ${USER_ID:-1000}
