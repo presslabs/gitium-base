@@ -35,7 +35,7 @@ services:
   db:
     image: percona:5.7
     volumes:
-      - ./.dev/db_data:/var/lib/mysql
+      - db_data:/var/lib/mysql
       - ./.dev/my.cnf:/etc/my.cnf.d/my.cnf
     restart: always
     environment:
