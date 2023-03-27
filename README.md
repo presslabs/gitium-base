@@ -12,7 +12,7 @@ To start a project you need to download and install
 
 With Docker installed and started run these commands from your terminal window
 
-    git clone -o gitium git@github.com:PressLabs/gitium-base AWESOME_SITE
+    git clone -o gitium git@github.com:presslabs/gitium-base AWESOME_SITE
 
 ## Connect to your remote git
 
@@ -59,4 +59,4 @@ With Docker installed and started run these commands from your terminal window
 
 done!
 
-#### Point your browser to [http://localhost:8080/wp/wp-admin/](http://localhost:8080/wp/wp-admin/) and login to the local development.
+#### Point your browser to [http://localhost:8080/wp-admin/](http://localhost:8080/wp-admin/) and login to the local development.
