@@ -24,8 +24,6 @@ services:
       DB_PASSWORD: not-so-secure
       DB_NAME: wordpress
       MEMCACHED_HOST: memcached:11211
-      WP_HOME: http://localhost:8080
-      WP_SITEURL: http://localhost:8080
       PHP_REQUEST_TIMEOUT: 300
       WORKER_GROUP: ${USER_ID:-1000}
       WORKER_USER: ${GROUP_ID:-1000}
