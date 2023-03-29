@@ -11,6 +11,7 @@ services:
       - ./config:/app/config
       - ./wp-content:/app/web/wp-content:rw
       - ./.dev/wp-config-docker.php:/app/web/wp-config.php:rw
+      - ./.dev/php.ini:/usr/local/etc/php/conf.d/zz-local.ini
     ports:
       - "8080:8080"
     restart: always
