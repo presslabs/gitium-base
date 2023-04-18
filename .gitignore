@@ -8,6 +8,14 @@
 !/wp-content/fonts/
 !/wp-content/plugins/advanced-cron-manager/vendor/
 
+# Special recent posts cache
+/wp-content/plugins/special-recent-posts/cache
+/wp-content/plugins/special-recent-posts/cache/**
+
+# Fast Secure Contact Form captcha cache
+/wp-content/plugins/si-contact-form/captcha/cache
+/wp-content/plugins/si-contact-form/captcha/cache/**
+
 ._*
 .ansible
 .bundle
@@ -53,3 +61,28 @@ wp-config.php
 .svnignore
 !/wp-content/plugins/wordpress-seo/src/wordpress/
 .dev/db_data
+
+#
+# VIM and linux specific files
+#
+# https://github.com/github/gitignore/blob/master/Global/Vim.gitignore
+
+# Swap
+[._]*.s[a-v][a-z]
+!*.svg  # comment out if you don't need vector files
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+Sessionx.vim
+
+# Temporary
+.netrwhist
+*~
+# Auto-generated tag files
+tags
+# Persistent undo
+[._]*.un~
