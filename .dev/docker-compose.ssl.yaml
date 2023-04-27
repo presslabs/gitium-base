@@ -1,0 +1,8 @@
+services:
+  wordpress:
+    ports:
+      - "443:4443"
+    volumes:
+      - ./.dev/nginx/vhost-pre.d/05_ssl.conf:/usr/local/docker/templates/nginx-vhost-conf.d/05_ssl.conf
+      - ./certificate.crt:/var/nginx/certificate.crt
+      - ./certificate.key:/var/nginx/certificate.key

@@ -26,7 +26,7 @@ With Docker installed and started run these commands from your terminal window
 ### Linux and Windows (with WSL):
 
     USER_ID="$(id -u)" GROUP_ID="$(id -g)" docker compose up
-
+    
 ### MacOS
 
     docker compose up
@@ -35,28 +35,36 @@ With Docker installed and started run these commands from your terminal window
 
 * obtain a database dump from your hosting provider
 * download it locally and unpack it
-* copy it to the Docker DB container:
+* import the database into local MySQL:
 
-    `docker cp database.sql gitium-base-db-1:/database.sql`
+    cat database.sql | docker compose exec -T db mysql -u wordpress -pnot-so-secure wordpress
 
-* connect to the MySQL terminal either from Docker Desktop, or by running:
+* connect to the `wordpress` container:
 
-    `docker exec -it gitium-base-db-1 mysql -u wordpress -pnot-so-secure wordpress`
-
-* import the database:
-
-    `source database.sql;`
-
-* disconnect from the MySQL terminal with `CTRL+D`
-
-* connect to the wordpress-1 container:
-
-    `docker exec -u www-data -it gitium-base-wordpress-1 /bin/bash`
+    docker compose exec wordpress bash
 
 * purge the cache from WP-CLI:
 
-    `wp cache flush`
+    wp cache flush
 
 done!
 
 #### Point your browser to [http://localhost:8080/wp-admin/](http://localhost:8080/wp-admin/) and login to the local development.
+
+
+### Runtime extensions
+
+We provide some extension to the default configuration that let's you change the running mode.
+
+#### Enable SSL
+
+ 1. Generate a key and a certificate and place it in the project's root named as `certificate.key` and `certificate.crt`.
+
+ 2. Run docker compose with ssl overwrite config liek:
+
+    docker compose -f docker-compose.yaml -f .dev/docker-compose.ssl.yaml up
+
+
+#### Run as root
+
+    docker compose -f docker-compose.yaml -f .dev/docker-compose.run-as-root.yaml up
