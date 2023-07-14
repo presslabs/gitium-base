@@ -1,0 +1,8 @@
+services:
+  wordpress:
+    user: "0:0"
+    environment:
+      WORKER_GROUP: www-data
+      WORKER_USER: www-data
+
+    tmpfs: {}

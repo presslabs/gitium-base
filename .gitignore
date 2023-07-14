@@ -1,3 +1,4 @@
+# Exclude everything from /wp-content/ except the default code folders
 /wp-content/*
 !/wp-content/index.php
 !/wp-content/languages/
@@ -6,6 +7,10 @@
 !/wp-content/themes/
 !/wp-content/root/
 !/wp-content/fonts/
+
+# Exceptions for various plugins
+
+# Advanced Cron Manager
 !/wp-content/plugins/advanced-cron-manager/vendor/
 
 # Special recent posts cache
@@ -16,6 +21,10 @@
 /wp-content/plugins/si-contact-form/captcha/cache
 /wp-content/plugins/si-contact-form/captcha/cache/**
 
+# Yoast SEO
+!/wp-content/plugins/wordpress-seo/src/wordpress/
+
+# Various files and extensions not needed in Git
 ._*
 .ansible
 .bundle
@@ -56,13 +65,11 @@ playbook.retry
 sitemap.xml
 sitemap.xml.gz
 wordfence-waf.php
-wordpress/*
 wp-config.php
 .svnignore
-!/wp-content/plugins/wordpress-seo/src/wordpress/
 .dev/db_data
 
-#
+
 # VIM and linux specific files
 #
 # https://github.com/github/gitignore/blob/master/Global/Vim.gitignore
@@ -86,3 +93,6 @@ Sessionx.vim
 tags
 # Persistent undo
 [._]*.un~
+
+# Certificates
+/certificate.*

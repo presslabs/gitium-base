@@ -6,15 +6,15 @@ Kickstart WordPress projects with a sane development environment!
 ## Requirements
 
 To start a project you need to download and install
-[Docker](https://docs.docker.com/get-docker/) and obviously, [Git](https://git-scm.com/downloads).
+[Docker](https://docs.docker.com/get-docker/) and of course [Git](https://git-scm.com/downloads).
 
-## Clone and go
+## Clone and get started
 
-With Docker installed and started run these commands from your terminal window
+Once Docker is installed and running, run these commands from your terminal window:
 
     git clone -o gitium git@github.com:presslabs/gitium-base AWESOME_SITE
 
-## Connect to your remote git
+## Connect to your remote git repo
 
     cd AWESOME_SITE
     git remote add origin git@github.com:GITHUB_USERNAME/AWESOME_SITE
@@ -23,40 +23,55 @@ With Docker installed and started run these commands from your terminal window
 
 ## Start the local environment
 
-### Linux and Windows (with WSL):
+    docker compose up
+
+### Linux and Windows (with WSL), if the above command returns errors:
 
     USER_ID="$(id -u)" GROUP_ID="$(id -g)" docker compose up
 
-### MacOS
-
-    docker compose up
-
 ### DB import
 
-* obtain a database dump from your hosting provider
-* download it locally and unpack it
-* copy it to the Docker DB container:
+* Get a database dump from your hosting provider
+* Download it locally and unpack it
+* Import the database into your local MySQL:
 
-    `docker cp database.sql gitium-base-db-1:/database.sql`
+```
+cat database.sql | docker compose exec -T db mysql -u wordpress -pnot-so-secure wordpress
+```
 
-* connect to the MySQL terminal either from Docker Desktop, or by running:
+* Connect to the `wordpress` container:
 
-    `docker exec -it gitium-base-db-1 mysql -u wordpress -pnot-so-secure wordpress`
+```
+docker compose exec wordpress bash
+```
 
-* import the database:
+* Clear the cache from WP-CLI:
 
-    `source database.sql;`
+```
+wp cache flush
+```
 
-* disconnect from the MySQL terminal with `CTRL+D`
+Done!
 
-* connect to the wordpress-1 container:
+#### Go to [http://localhost:8080/wp-admin/](http://localhost:8080/wp-admin/) from your browser and log in to the local development environment.
 
-    `docker exec -u www-data -it gitium-base-wordpress-1 /bin/bash`
 
-* purge the cache from WP-CLI:
+### Runtime extensions
 
-    `wp cache flush`
+We offer some extensions to the default configuration that allow you to change the running mode.
 
-done!
+#### Enable SSL
 
-#### Point your browser to [http://localhost:8080/wp-admin/](http://localhost:8080/wp-admin/) and login to the local development.
+ 1. Generate a key and a certificate and place them in the root directory of the project under the names `certificate.key` and `certificate.crt`.
+
+ 2. Run docker compose overwriting the default ssl config like this:
+
+```
+docker compose -f docker-compose.yaml -f .dev/docker-compose.ssl.yaml up
+```
+
+#### Run as root
+
+```
+docker compose -f docker-compose.yaml -f .dev/docker-compose.run-as-root.yaml up
+```
