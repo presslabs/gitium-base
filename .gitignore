@@ -8,22 +8,6 @@
 !/wp-content/root/
 !/wp-content/fonts/
 
-# Exceptions for various plugins
-
-# Advanced Cron Manager
-!/wp-content/plugins/advanced-cron-manager/vendor/
-
-# Special recent posts cache
-/wp-content/plugins/special-recent-posts/cache
-/wp-content/plugins/special-recent-posts/cache/**
-
-# Fast Secure Contact Form captcha cache
-/wp-content/plugins/si-contact-form/captcha/cache
-/wp-content/plugins/si-contact-form/captcha/cache/**
-
-# Yoast SEO
-!/wp-content/plugins/wordpress-seo/src/wordpress/
-
 # Various files and extensions not needed in Git
 ._*
 .ansible
@@ -69,7 +53,6 @@ wp-config.php
 .svnignore
 .dev/db_data
 
-
 # VIM and linux specific files
 #
 # https://github.com/github/gitignore/blob/master/Global/Vim.gitignore
@@ -91,8 +74,35 @@ Sessionx.vim
 *~
 # Auto-generated tag files
 tags
+
 # Persistent undo
 [._]*.un~
 
 # Certificates
 /certificate.*
+
+# Exceptions for various plugins
+
+# Advanced Cron Manager
+!/wp-content/plugins/advanced-cron-manager/vendor/
+
+# Special recent posts cache
+/wp-content/plugins/special-recent-posts/cache
+/wp-content/plugins/special-recent-posts/cache/**
+
+# Fast Secure Contact Form captcha cache
+/wp-content/plugins/si-contact-form/captcha/cache
+/wp-content/plugins/si-contact-form/captcha/cache/**
+
+# Yoast SEO
+!/wp-content/plugins/wordpress-seo/src/wordpress/
+
+#Elementor Pro
+!/wp-content/plugins/elementor-pro/modules/dynamic-tags/tags/
+!/wp-content/plugins/elementor-pro/modules/dynamic-tags/acf/tags/
+!/wp-content/plugins/elementor-pro/modules/dynamic-tags/pods/tags/
+!/wp-content/plugins/elementor-pro/modules/dynamic-tags/toolset/tags/
+!/wp-content/plugins/elementor-pro/modules/woocommerce/tags/
+
+#Elementor Custom Skin
+!/wp-content/plugins/ele-custom-skin/theme-builder/dynamic-tags/tags/
