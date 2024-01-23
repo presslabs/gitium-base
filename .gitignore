@@ -106,3 +106,9 @@ tags
 
 #Elementor Custom Skin
 !/wp-content/plugins/ele-custom-skin/theme-builder/dynamic-tags/tags/
+
+#Mailchimp for WooCommerce
+!/wp-content/plugins/mailchimp-for-woocommerce/includes/vendor/
+
+#Perfmatters
+!/wp-content/plugins/perfmatters/vendor/
