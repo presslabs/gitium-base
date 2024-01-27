@@ -30,7 +30,7 @@ services:
       WORKER_GROUP: ${USER_ID:-1000}
       WORKER_USER: ${GROUP_ID:-1000}
       ## Proxy all missing media files from local to remote site for easy development.
-      # MEDIA_FALLBACK_URL: https://<parent domain name>
+      # STACK_MEDIA_FALLBACK_URL: https://<parent domain name>
 
   db:
     platform: linux/x86_64
