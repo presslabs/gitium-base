@@ -1,0 +1,10 @@
+services:
+  wordpress:
+    environment:
+      EP_HOST: http://es:9200
+
+  es:
+    image: docker.elastic.co/elasticsearch/elasticsearch-oss:7.9.3
+    environment:
+      - discovery.type=single-node
+
