@@ -126,6 +126,14 @@ if ( ! defined( 'DISALLOW_FILE_MODS' ) ) {
 
 define('FS_METHOD', 'direct');
 
+/*
+ * ElasticPress config
+ */
+
+if ( ! defined( 'EP_HOST' ) && getenv( 'EP_HOST' ) ) {
+    define( 'EP_HOST', getenv( 'EP_HOST' ) );
+}
+
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
