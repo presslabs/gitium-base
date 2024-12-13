@@ -112,3 +112,6 @@ tags
 
 #Perfmatters
 !/wp-content/plugins/perfmatters/vendor/
+
+#Google Analytics
+!/wp-content/plugins/wd-google-analytics/google/vendor/
