@@ -75,3 +75,9 @@ docker compose -f docker-compose.yaml -f .dev/docker-compose.ssl.yaml up
 ```
 docker compose -f docker-compose.yaml -f .dev/docker-compose.run-as-root.yaml up
 ```
+
+#### Run with Elastic Search
+
+```
+docker compose -f docker-compose.yaml -f .dev/docker-compose.es.yaml up
+```
