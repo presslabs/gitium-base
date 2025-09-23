@@ -3,7 +3,7 @@ version: "3.3"
 services:
   wordpress:
     platform: linux/x86_64
-    image: docker.io/presslabs/wordpress-runtime:latest-wp-php-8.1
+    image: docker.io/presslabs/wordpress-runtime:latest-wp-php-8.2
     user: "${USER_ID:-1000}:${GROUP_ID:-1000}"
     depends_on:
       - db
